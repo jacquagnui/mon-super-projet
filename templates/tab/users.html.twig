@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Les users {% endblock %}
+  {% block body %}
+    <table class="table table-bordered">
+      <thead>
+        <th class="alert alert-danger">Firstname</th>
+        <th>Name</th>
+        <th>Age</th>
+      </thead>
+      <tbody>
+      {% for user in users %}
+        <tr>
+            <td> {{user.firstname}} </td>
+            <td> {{user.name}} </td>
+            <td> {{user.age}} </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    {% endblock %}
